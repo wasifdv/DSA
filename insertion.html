@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let el;
+      let position;
+      let array = [2, 3, 4, 5, 6, 7, 8, 9];
+      function x() {
+        el = document.getElementById("new element").value;
+        position = document.getElementById("position").value;
+        for (let index = array.length - 1; index >= 0; index--) {
+          if (index >= position) {
+            array[index + 1] = array[index]; // 5th position pe 4th position shift hoga  example array[5]= array[4]
+            if (index == position) {
+              array[index] = el;
+            }
+          }
+        }
+        document.write(array);
+        
+      }
+      
+
+      // console.warn(array);
+      
+      //  document.write(array);
+
+      //   console.warn(array);
+
+      //   // Shift elements to the right to make space
+      //   for (let i = array.length; i > position; i--) {
+      //     array[i] = array[i - 1];
+      //   }
+
+      //   // Insert the new element at the specified position
+      //   array[position] = el;
+
+      //   console.log(array);
+    </script>
+    <input type="text" id="new element" placeholder="new element" />
+    <input type="text" id="position" placeholder="position" />
+    <button onclick="x()">GET</button>
+  </body>
+</html>
