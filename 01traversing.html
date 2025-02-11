@@ -11,13 +11,16 @@
 
       function takel() {
         let el = document.getElementById("element").value;
-                document.write(array[el])
-      };
+        if (el < 0 || el > array.length-1 || isNaN(el)) {
+          document.write("please enter valid number");
+        }
+        else{
+        document.write(array[el]);
 
-      
-
+        }
+      }
     </script>
-        <input type="text" id="element">
+    <input type="text" id="element" />
     <button onclick="takel()">GET ELEMENT</button>
   </body>
 </html>

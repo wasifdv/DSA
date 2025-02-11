@@ -7,32 +7,24 @@
   </head>
   <body>
     <script>
-     let num = [1, 65, 5, 4, 12, 62, 10];
-let target = 9;
-let arr = [];
+      
+      
 
-var twoSum = function (num, target) {
-  for (let i = 0; i < num.length; i++) {
-    let c = num[i]; // Current element
-    let d = num[i + 1]; // Next element
+      var twoSum = function (nums, target) {
+        for (let i = 0; i < nums.length; i++) {
+          for (let j = i+1; j < nums.length; j++) {
+            if (nums[i] + nums[j] === target) {
+              return [i, j];
+            }
+          }
+        }
+        return [];
+      };
 
-    if (d !== undefined) { // Ensure `d` is not undefined
-      let e = c + d; // Sum of the current and next elements
-      if (e === target) {
-        arr.push(i, i + 1); // Push the indices of the two numbers
-        break; // Stop after finding the first pair
-      }
-    }
-  }
-
-  return arr; // Return the array of indices
-};
-
-let result = twoSum(num, target);
-console.log(result);
-
-
-    
+      let nums = [1, 65, 5, 4, 12, 62, 10];
+      let target = 9;
+      let result = twoSum(nums, target);
+      console.log(result);
     </script>
   </body>
 </html>

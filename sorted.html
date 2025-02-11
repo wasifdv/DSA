@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        let list1 = [2, 6, 9];
+        let list2 = [1, 4, 5];
+      var mergeTwoLists = function (list1, list2) {
+        let count = 0
+        for (let i = 0; i < list2.length; i++) {
+          list1.push(list2[i]);
+          }
+          let x = list1 //[2,6,9,1,4,5]
+      
+          if(x[count]>x[count+1]){
+                let temp=x[count];
+                x[count]=x[count+1];
+                x[count+1]=temp;
+            }
+          
+            console.log(x)
+
+        }
+        
+      
+
+      
+        let result = mergeTwoLists(list1, list2);
+        
+    </script>
+  </body>
+</html>

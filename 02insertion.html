@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let array = [23, 45, 2, 4, 76, 9];
+let position = 2; // Yeh index hai (0-based)
+let newEl = 21;
+let newArray = []; // Naya array banayenge
+
+function add() {
+  for (let i = 0; i < array.length; i++) {
+    
+      // Purane array ke elements ko bhi copy karo
+      newArray.push(array[i]);
+    
+    if (i === position) {
+      // Jab `position` ka index mile, wahan `newEl` daal do
+      newArray.push(newEl);
+    }
+   
+  }
+  return newArray;
+}
+
+console.log(add()); // Output: [23, 45, 21, 2, 4, 76, 9]
+
+      
+    </script>
+  </body>
+</html>
