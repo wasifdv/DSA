@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+      let el = Number(prompt("ENTER any ELEMENT")); // Convert input to number
+      let found = false; // Flag to track if element is found
+
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] === el) {
+          alert(`Yes! ${el} is available in the array.`);
+          found = true;
+          break; // Stop searching once found
+        }
+      }
+
+      // If the loop finishes without finding the element
+      if (!found) {
+        alert(`Oh no! ${el} is not available in the array.`);
+      }
+    </script>
+  </body>
+</html>
