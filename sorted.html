@@ -7,30 +7,37 @@
   </head>
   <body>
     <script>
-        let list1 = [2, 6, 9];
-        let list2 = [1, 4, 5];
-      var mergeTwoLists = function (list1, list2) {
-        let count = 0
-        for (let i = 0; i < list2.length; i++) {
-          list1.push(list2[i]);
-          }
-          let x = list1 //[2,6,9,1,4,5]
-      
-          if(x[count]>x[count+1]){
-                let temp=x[count];
-                x[count]=x[count+1];
-                x[count+1]=temp;
-            }
-          
-            console.log(x)
+      let list1 = [];
+      let list2 = [0];
 
+      var mergeTwoLists = function () {
+        let newArr = [];
+
+        // Dono lists ke elements newArr me dalna
+        for (let i = 0; i < list1.length; i++) {
+          newArr.push(list1[i]);
         }
-        
-      
+        for (let i = 0; i < list2.length; i++) {
+          newArr.push(list2[i]);
+        }
 
-      
-        let result = mergeTwoLists(list1, list2);
-        
+        // Bubble Sort with proper bounds checking
+        for (let i = 0; i < newArr.length - 1; i++) {
+          // n-1 iterations
+          for (let j = 0; j < newArr.length - 1 ; j++) {
+            // j+1 error fix
+            if (newArr[j] > newArr[j + 1]) {
+              let temp = newArr[j];
+              newArr[j] = newArr[j + 1];
+              newArr[j + 1] = temp;
+            }
+          }
+        }
+
+        return newArr;
+      };
+
+      mergeTwoLists();
     </script>
   </body>
 </html>
