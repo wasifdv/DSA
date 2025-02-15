@@ -7,29 +7,43 @@
   </head>
   <body>
     <script>
+     // 1
       let array = [23, 45, 2, 4, 76, 9];
-let position = 2; // Yeh index hai (0-based)
-let newEl = 21;
-let newArray = []; // Naya array banayenge
+      let position = 2; // Yeh i hai (0-based)
+      let newnum = 21;
+      let newArray = []; // Naya array banayenge
 
-function add() {
-  for (let i = 0; i < array.length; i++) {
-    
-      // Purane array ke elements ko bhi copy karo
-      newArray.push(array[i]);
-    
-    if (i === position) {
-      // Jab `position` ka index mile, wahan `newEl` daal do
-      newArray.push(newEl);
-    }
-   
-  }
-  return newArray;
-}
+      function add() {
+        for (let i = 0; i < array.length; i++) {
+          // Purane array ke numements ko bhi copy karo
+          newArray.push(array[i]);
 
-console.log(add()); // Output: [23, 45, 21, 2, 4, 76, 9]
+          if (i === position) {
+            // Jab `position` ka i mile, wahan `newnum` daal do
+            newArray.push(newnum);
+          }
+        }
+        return newArray;
+      }
 
-      
+      console.log(add()); // Output: [23, 45, 21, 2, 4, 76, 9]
+
+      //2
+      let num = 1
+      let position = 0
+      let array = [2, 3, 4, 5, 6, 7, 8, 9];
+      function x() {
+        for (let i = array.length - 1; i >= 0; i--) {
+          if (i >= position) {
+            array[i + 1] = array[i]; // 5th position pe 4th position shift hoga  example array[5]= array[4]
+            if (i == position) {
+              array[i] = num;
+            }
+          }
+        }
+        document.write(array);
+      }
+      x()
     </script>
   </body>
 </html>

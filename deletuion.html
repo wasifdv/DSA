@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let array = [2, 4, 6, 8, 10, 11, 12];
+      let position = 5;
+      //   let newArr = [];
+      //   for (let i = 0; i < array.length - 1; i++) {
+      //     if (i == position) {
+      //       array[i] = array[i + 1];
+      //     }
+      //     newArr.push(array[i]);
+      //   }
+      //   console.log(newArr);
+      for (let i = position; i < array.length - 1; i++) {
+        array[i] = array[i + 1];
+      }
+      array.length = array.length-1
+      console.log(array)
+    </script>
+  </body>
+</html>
