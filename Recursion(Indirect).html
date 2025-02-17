@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   let money = 100;
+      //   let totalApple = 0;
+      //   function buyApple(x) {
+      //     if (x > 0) {
+      //       buyMore(x - 10);
+      //       console.log("i have", x, "rUpees", totalApple);
+      //     } else {
+      //       console.log("i don't have more  money");
+      //     }
+      //   }
+
+      //   function buyMore(x) {
+      //     totalApple++;
+      //     buyApple(x - 5);
+      //   }
+
+      //   buyApple(money);
+
+      function test(x) {
+        if (x > 0) {
+          test(x - 1);
+        }
+
+        console.log(x);
+      }
+      let number = 2;
+      test(number);
+    </script>
+  </body>
+</html>

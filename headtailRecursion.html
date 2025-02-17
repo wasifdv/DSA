@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function digit() {
+        let a = 15;
+        console.log(a);
+        if (true) {
+          console.log(a - 5);
+        } else {
+          console.log(a + 5);
+        }
+        
+      }
+      function kill() {
+        digit();
+      }
+      function num() {
+        kill();
+      }
+      function fruits(params) {
+        num();
+      }
+
+      function topFunction(params) {
+        fruits();
+      }
+      topFunction();
+    </script>
+  </body>
+</html>

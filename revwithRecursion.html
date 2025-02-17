@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      let temp;
+      let start = 0;
+      function advanceReverse(data, s, e) {
+        console.warn(data);
+        
+        if (s <= e) {
+          let temp = data[s];
+          data[s] = data[e];
+          data[e] = temp;
+          advanceReverse(data, s + 1, e - 1);
+        }
+      }
+      advanceReverse(array, start, array.length - 1);
+    </script>
+  </body>
+</html>
