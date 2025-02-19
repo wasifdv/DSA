@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let data = [];
+      let len = data.length;
+
+      function push(item) {
+        data[len] = item;
+        len += 1;
+      }
+      function pop() {
+        lastRemovedItem = data[len - 1];
+        len -= 1;
+        data.length = len;
+        return lastRemovedItem;
+      }
+      function reverseStr(itm) {
+        for (let i = 0; i < itm.length; i++) {
+          push(itm[i]);
+        }
+        for (let i = 0; i < itm.length; i++) {
+          itm[i] = pop();
+        }
+      }
+
+      let str = "wasif";
+      str = str.split("");
+      reverseStr(str);
+      console.warn(str.join(""));
+    </script>
+  </body>
+</html>
