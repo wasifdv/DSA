@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Stack {
+        item = [];
+        currentSize;
+        maxSize;
+        constructor(size) {
+          this.maxSize = size;
+          this.currentSize = this.item.length;
+        }
+        push(newVal) {
+          if (this.currentSize >= this.maxSize) {
+            alert("stack is full");
+          } else {
+            this.item[this.currentSize] = newVal;
+            this.currentSize++;
+          }
+        }
+        pop() {
+          if (this.currentSize > 0) {
+            // let poppedValue = this.item[this.currentSize - 1]; {kkynki index 0 se hota hai 
+            let poppedValue = this.item.length - 1;              // matlab (Minus) use nahi karoge to undifined aayega    }
+            this.currentSize -= 1;
+            this.item.length = this.currentSize; //......array ka length ek chota kardo fir print karwa do..........
+            return poppedValue;
+          } else {
+            alert("stack is already empty");
+          }
+        }
+        reverse() {
+          let tempStack = [];
+          while (this.currentSize > 0) {
+            tempStack.push(this.pop());
+          }
+          for (let i = 0; i < tempStack.length; i++) {
+            this.push(tempStack[i]);// Restore elements back to the original stack
+          }
+        }
+
+        display() {
+          console.warn(this.item);
+        }
+      }
+      x = new Stack(5);
+    </script>
+  </body>
+</html>

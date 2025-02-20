@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let queue = [];
+      let len = queue.length;
+      let maxSize = 5;
+      function enqueue(data) {
+        if (len >= maxSize) {
+          alert("Queue is already full");
+        } else {
+          queue[len] = data;
+          len++;
+        }
+      }
+      function dequeue() {
+        //                 ......array ka length ek chota kardo fir print karwa do..........
+        if (!isEmpty()) {
+          for (let i = 0; i < queue.length; i++) {
+            queue[i] = queue[i + 1];
+          }
+          len--;
+          queue.length = len; // length chota karne se array ka index ek kam value show karega update hogiya array ka length
+        } else {
+          alert("Queue is already empty");
+        }
+      }
+      function front() {
+        if (!isEmpty()) {
+          console.log(queue[0]);
+        } else {
+          alert("Queue is already empty");
+        }
+      }
+      function rear() {
+        if (!isEmpty()) {
+          console.log(queue[len - 1]);
+        } else {
+          alert("Queue is already empty");
+        }
+      }
+      function isEmpty() {
+          if (len > 0) {
+            return false;
+          } else {
+            return true;
+          }
+        }
+      function display() {
+        console.warn(queue); // array ka lenth kam hua isiliye array ka aakhri value show nahi hua yaha pe
+      }
+      enqueue(2);
+      enqueue(4);
+      enqueue(6);
+      display();
+    </script>
+  </body>
+</html>
